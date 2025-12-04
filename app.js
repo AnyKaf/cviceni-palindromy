@@ -6,3 +6,14 @@ const textPozpatku = (text) => {
 
 // textPozpatku('Ahoj světe') // 'etěvs johA'
 // textPozpatku('Kajak') // 'kajaK'
+
+const slova = document.querySelectorAll("li");
+
+slova.forEach((slovo) => {
+    const spravne = slovo.textContent
+    const opacne = textPozpatku(spravne)
+
+    if(spravne === opacne){
+        slovo.classList.add("palindrom")
+    }
+})
