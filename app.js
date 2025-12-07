@@ -10,7 +10,7 @@ const textPozpatku = (text) => {
 const slova = document.querySelectorAll("li");
 
 slova.forEach((slovo) => {
-    const spravne = slovo.textContent
+    const spravne = slovo.textContent.toLocaleLowerCase()
     const opacne = textPozpatku(spravne)
 
     if(spravne === opacne){
